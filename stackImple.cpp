@@ -42,12 +42,18 @@ class stack {
     }
 
     void pop() {
+        int poppedItem;
         if(top == -1) {
             cout << "\nStack underflow...";
         }
         top--;
+        arr[top] = poppedItem;
+        court << "\nPopped item from the stack is: " << poppedItem;
 
-        cout << "\nElement successfully popped..!";
+        cout << "\nNew stack is: ";
+        for(int i=0; i<n; i++) {
+            cout << arr[i] << " ";
+        }
     }
 
     bool emptyCheck() {
