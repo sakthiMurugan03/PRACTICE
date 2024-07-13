@@ -9,7 +9,7 @@ class Sample {
         }
         
         for(int i=num; i>=2; i--) { //traversal from number 
-            fact = fact.multiply(BigInteger.valueOf(i));
+            fact = fact.multiply(BigInteger.valueOf(i)); //use of multiply func. for BigInteger product
         }
         System.out.print("\nFactorial of " + num + " is " + fact);
         
