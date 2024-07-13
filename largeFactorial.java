@@ -1,25 +1,22 @@
-import java.util.*;
-import java.math.BigInteger;
+import java.math.BigInteger; //importing BigInteger class to represent exponentially large values
 
 class Sample {
-    
     public static int Factorial(int num) {
-        BigInteger fact = BigInteger.ONE;
+        BigInteger fact = BigInteger.ONE; 
         
-        if(num == 0 || num == 1) {
+        if(num == 0 || num == 1) { //base case
             return 1;
         }
         
-        for(int i=num; i>=2; i--) {
+        for(int i=num; i>=2; i--) { //traversal from number 
             fact = fact.multiply(BigInteger.valueOf(i));
         }
+        System.out.print("\nFactorial of " + num + " is " + fact);
         
-        System.out.print("\nFactorial of entered number is: " + fact);
-        
-        return -1;
+        return num;
     }
     
     public static void main(String args[]) {
-        Factorial(150);
+        Factorial(25);
     }
 }
