@@ -1,19 +1,25 @@
 import java.util.*;
-import java.math.BigInteger; //import BigInteger math module
+import java.math.BigInteger;
 
-class Factorial {
+class Sample {
     
-    public static void factorial(int num) {
-        BigInteger fact = BigInteger.ONE; //using BigInteger data type to store larger values
-    
+    public static int Factorial(int num) {
+        BigInteger fact = BigInteger.ONE;
+        
+        if(num == 0 || num == 1) {
+            return 1;
+        }
+        
         for(int i=num; i>=2; i--) {
             fact = fact.multiply(BigInteger.valueOf(i));
         }
+        
         System.out.print("\nFactorial of entered number is: " + fact);
+        
+        return -1;
     }
     
-    
     public static void main(String args[]) {
-        factorial(150);
+        Factorial(150);
     }
 }
